@@ -130,3 +130,7 @@ eval "$(starship init zsh)"
 # Nala
 alias upd="sudo nala update"
 alias upg="sudo nala upgrade"
+alias inst="sudo nala install"
+
+# direnv
+eval "$(direnv hook zsh)"
