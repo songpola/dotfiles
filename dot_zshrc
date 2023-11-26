@@ -130,4 +130,4 @@ eval "$(starship init zsh)"
 # Nala
 alias upd="sudo nala update"
 alias upg="sudo nala upgrade"
-alias inst="sudo nala install"
+alias ins="sudo nala install"
