@@ -24,6 +24,15 @@ sudo nala install zsh
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply https://github.com/songpola/dotfiles.git
 ```
 
+### Automatically commit and push changes to your repo
+
+`~/.config/chezmoi/chezmoi.toml`
+```toml
+[git]
+autoCommit = true
+autoPush = true
+```
+
 ## [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 
 ```zsh
