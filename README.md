@@ -27,6 +27,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply https://github.com/songpola
 ### Automatically commit and push changes to your repo
 
 `~/.config/chezmoi/chezmoi.toml`
+
 ```toml
 [git]
 autoCommit = true
