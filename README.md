@@ -3,7 +3,7 @@
 ## Update
 
 ```bash
-sudo apt update && sudo apt install nala
+sudo apt update && sudo apt install nala -y
 ```
 
 ## [Nala](https://gitlab.com/volian/nala)
