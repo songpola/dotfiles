@@ -15,7 +15,7 @@ sudo nala update && sudo nala upgrade -y
 ## [ZSH](https://www.zsh.org/)
 
 ```bash
-sudo nala install zsh
+sudo nala install zsh -y
 ```
 
 ## [Chezmoi](https://www.chezmoi.io/)
