@@ -24,9 +24,9 @@ sudo nala install zsh -y
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply https://github.com/songpola/dotfiles.git
 ```
 
-### Automatically commit and push changes to your repo
+### `~/.config/chezmoi/chezmoi.toml`
 
-`~/.config/chezmoi/chezmoi.toml`
+Automatically commit and push changes to your repo
 
 ```toml
 [git]
@@ -49,18 +49,33 @@ curl -sS https://starship.rs/install.sh | sh
 ### Plugins
 
 ```zsh
-# zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+(
+  # zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-# zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  # zsh-syntax-highlighting
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-# zsh-history-substring-search
-git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+  # zsh-history-substring-search
+  git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
 
-# zsh-completions
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+  # zsh-completions
+  git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 
-# pnpm
-git clone --depth=1 https://github.com/ntnyq/omz-plugin-pnpm.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/pnpm
+  # pnpm
+  git clone --depth=1 https://github.com/ntnyq/omz-plugin-pnpm.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/pnpm
+
+  # gradle-completion
+  git clone https://github.com/gradle/gradle-completion ~/.oh-my-zsh/plugins/gradle-completion
+)
+```
+
+## [SDKMAN!](https://sdkman.io/)
+
+```zsh
+sudo nala install zip unzip -y
+```
+
+```zsh
+curl -s "https://get.sdkman.io" | bash
 ```
