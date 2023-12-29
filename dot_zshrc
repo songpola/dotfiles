@@ -80,6 +80,7 @@ plugins=(
   zsh-syntax-highlighting
   zsh-history-substring-search
   pnpm
+  gradle-completion
 )
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
@@ -132,3 +133,7 @@ eval "$(starship init zsh)"
 alias upd="sudo nala update"
 alias upg="sudo nala upgrade"
 alias ins="sudo nala install"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
