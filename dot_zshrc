@@ -130,9 +130,10 @@ export PATH="$HOME/bin:$PATH"
 eval "$(starship init zsh)"
 
 # Nala
-alias upd="sudo nala update"
-alias upg="sudo nala upgrade"
-alias ins="sudo nala install"
+alias nlu="sudo nala upgrade"
+alias nli="sudo nala install"
+alias nll="sudo nala list"
+alias nllu="sudo nala list --upgradable"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
