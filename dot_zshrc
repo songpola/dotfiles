@@ -146,4 +146,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# broot
 source /home/songpola/.config/broot/launcher/bash/br
+
+# bat
+alias cat="batcat"
