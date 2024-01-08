@@ -21,7 +21,7 @@ sudo nala install zsh -y
 ## [Chezmoi](https://www.chezmoi.io/)
 
 ```zsh
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply https://github.com/songpola/dotfiles.git
+sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply https://github.com/songpola/dotfiles.git
 ```
 
 ### `~/.config/chezmoi/chezmoi.toml`

@@ -115,35 +115,35 @@ alias zshrc="code ~/.zshrc"
 alias srczsh="source ~/.zshrc"
 alias cls="clear"
 
-# pnpm
-export PNPM_HOME="/home/songpola/.local/share/pnpm"
-case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# bin
-export PATH="$HOME/bin:$PATH"
-
-# Starship
-eval "$(starship init zsh)"
-
 # Nala
 alias nlu="sudo nala upgrade"
 alias nli="sudo nala install"
 alias nll="sudo nala list"
 alias nllu="sudo nala list --upgradable"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# Starship
+eval "$(starship init zsh)"
 
-# bun completions
-[ -s "/home/songpola/.bun/_bun" ] && source "/home/songpola/.bun/_bun"
+# .local/bin
+export PATH="$HOME/.local/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 source /home/songpola/.config/broot/launcher/bash/br
