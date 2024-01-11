@@ -116,10 +116,10 @@ alias srczsh="source ~/.zshrc"
 alias cls="clear"
 
 # Nala
-alias nlu="sudo nala upgrade"
-alias nli="sudo nala install"
-alias nll="sudo nala list"
-alias nllu="sudo nala list --upgradable"
+alias snu="sudo nala upgrade"
+alias sni="sudo nala install"
+alias snl="sudo nala list"
+alias snlu="sudo nala list --upgradable"
 
 # Starship
 eval "$(starship init zsh)"
