@@ -39,3 +39,7 @@ alias czcd = cd (chezmoi source-path)
 alias czed = chezmoi edit $nu.config-path
 alias czdf = chezmoi diff
 alias czap = chezmoi apply -v
+
+
+alias wf = winget find
+alias wa = winget add -i
