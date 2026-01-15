@@ -37,8 +37,10 @@ alias c = clear
 alias ll = ls -la
 
 alias cz = chezmoi
+alias czg = chezmoi git
+alias czst = chezmoi status
 alias czcd = cd (chezmoi source-path)
-alias czed = chezmoi edit $nu.config-path
+alias czed = chezmoi edit --apply $nu.config-path
 alias czdf = chezmoi diff
 alias czap = chezmoi apply -v
 
