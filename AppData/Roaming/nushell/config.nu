@@ -22,15 +22,10 @@ $env.config.show_banner = false
 
 # Use VS Code as default editor
 # let vscode = which code | first | get path # no need to find full path
-let vscode_wait = [ code --wait ]
-# Below are used by:
-# - Nushell: `config nu`
-$env.config.buffer_editor = $vscode_wait
+$env.config.buffer_editor = [ code --wait ]
 # Below are used by:
 # - chezmoi: `chezmoi edit`
-# - Nushell: `config nu`
-let vscode_wait = $vscode_wait | str join ' '
-$env.VISUAL = $vscode_wait
+$env.VISUAL = $env.config.buffer_editor | str join ' '
 $env.EDITOR = $env.VISUAL
 
 alias c = clear
@@ -40,9 +35,8 @@ alias cz = chezmoi
 alias czg = chezmoi git
 alias czst = chezmoi status
 alias czcd = cd (chezmoi source-path)
-alias czed = chezmoi edit --apply $nu.config-path
+alias czed = chezmoi edit -a -v $nu.config-path
 alias czdf = chezmoi diff
-alias czap = chezmoi apply -v
 
 alias wf = winget find
 alias wa = winget add -i
