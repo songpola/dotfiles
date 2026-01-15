@@ -38,9 +38,14 @@ alias czcd = cd (chezmoi source-path)
 alias czed = chezmoi edit -a -v $nu.config-path
 alias czdf = chezmoi diff
 
-alias wf = winget find
-alias wa = winget add -i
+alias edc = czed # edit config
 
+alias wg = winget
+alias wgf = winget find
+alias wga = winget add -i
+
+alias ws = wsl
 alias wslv = wsl -l -v
-alias wslt = wsl -t
-alias wsld = wsl -d
+alias wsd = wsl -d
+alias wst = wsl -t
+alias wsht = wsl --shutdown
