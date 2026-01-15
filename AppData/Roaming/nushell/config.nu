@@ -22,14 +22,15 @@ $env.config.show_banner = false
 
 # Use VS Code as default editor
 let vscode = which code | first | get path
+let vscode_wait = [$vscode --wait]
 # Below are used by:
 # - Nushell: `config nu`
-$env.config.buffer_editor = $vscode
+$env.config.buffer_editor = $vscode_wait
 # Below are used by:
 # - chezmoi: `chezmoi edit`
 # - Nushell: `config nu`
-$env.VISUAL = $vscode
-$env.EDITOR = $vscode
+$env.VISUAL = $vscode_wait
+$env.EDITOR = $vscode_wait
 
 alias c = clear
 alias ll = ls -la
