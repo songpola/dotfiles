@@ -44,8 +44,7 @@ alias wg = winget
 alias wgf = winget find
 alias wga = winget add -i
 
-alias ws = wsl
 alias wslv = wsl -l -v
-alias wsd = wsl -d
-alias wst = wsl -t
+alias wsld = wsl -d
+alias wslt = wsl -t
 alias wsht = wsl --shutdown
